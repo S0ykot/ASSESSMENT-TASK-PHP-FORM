@@ -4,8 +4,14 @@ $name="";
 $full="";
 if (isset($_REQUEST['submit'])) {
 	
-	$name = $_REQUEST['name'];
-	$full = "Your name is ".$name;
+	if (empty($_REQUEST['name'])) {
+		echo "<script>alert('Input a name');</script>";
+	}
+	else
+	{
+		$name = $_REQUEST['name'];
+		$full = "Your name is ".$name;
+	}
 }
 
 ?>

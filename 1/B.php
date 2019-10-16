@@ -36,9 +36,15 @@
 
 if (isset($_REQUEST['submit'])) {
 	
-	$name = $_REQUEST['name'];
+	if (empty($_REQUEST['name'])) {
+		echo "<script>alert('Input a name');</script>";
+	}
+	else
+	{
+		$name = $_REQUEST['name'];
 
-	echo "Your Name is <h1>".$name."</h1>";
+		echo "Your Name is <h1>".$name."</h1>";
+	}
 }
 
 ?>

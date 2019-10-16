@@ -4,8 +4,14 @@ $mail="";
 $full="";
 if (isset($_REQUEST['submit'])) {
 	
+	if (empty($_REQUEST['email'])) {
+	echo "<script>alert('Input a email');</script>";
+}
+else
+{
 	$mail = $_REQUEST['email'];
-	$full = "Your mail is ".$mail;
+	$full= "Your mail is ".$mail;
+}
 
 }
 

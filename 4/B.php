@@ -35,9 +35,14 @@
 <?php
 
 if (isset($_REQUEST['submit'])) {
+	if (empty($_REQUEST['gender'])) {
+	echo "<script>alert('Select gender');</script>";
+	}
+else
+{
 	$gen = $_REQUEST['gender'];
-
-	echo "Select gender is ".$gen;
+	echo "Selected gender is ".$gen;
+}
 }
 
 ?>

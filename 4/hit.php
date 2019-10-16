@@ -1,7 +1,12 @@
 <?php
-error_reporting(0);
-$gen = $_REQUEST['gender'];
 
-echo "Selected gender is ".$gen;
+if (empty($_REQUEST['gender'])) {
+	echo "<script>alert('Select gender');</script>";
+}
+else
+{
+	$gen = $_REQUEST['gender'];
+	echo "Selected gender is ".$gen;
+}
 
 ?>

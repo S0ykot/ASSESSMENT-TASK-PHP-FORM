@@ -3,8 +3,15 @@
 $deg[]="";
 $msg="";
 if (isset($_REQUEST['submit'])) {
-	$msg= "Seleced Degree's :";
+	
+	if (empty($_REQUEST['option'][0])) {
+	echo "<script>alert('No degree selected');</script>";
+}
+else
+{
 	$deg = $_REQUEST['option'];
+	$msg= "Seleced Degree's :";
+}
 }
 
 ?>

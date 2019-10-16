@@ -35,10 +35,14 @@
 <?php
 
 if (isset($_REQUEST['submit'])) {
-	
+	if (empty($_REQUEST['email'])) {
+	echo "<script>alert('Input a email');</script>";
+}
+else
+{
 	$mail = $_REQUEST['email'];
-
-	echo "<br>Your mail is ".$mail;
+	echo "Your mail is ".$mail;
+}
 }
 
 ?>
